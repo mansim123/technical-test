@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rowdies&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color:rgb(110, 91, 254);
+}
+
+@keyframes fadein {
+    from {
+      opacity: 0;
+      transform: translateY(0px);
+    }
+  
+    to {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-20px);
+    }
+  }
+  
+  @-webkit-keyframes fadein {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  
+    to {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0px);
+    }
+  }
