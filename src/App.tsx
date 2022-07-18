@@ -9,34 +9,34 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+
+    const dataArray: any[] = [];
+
+    const getData = async () => {
+      try {
+        const res = await fetch(
+          "https://randomuser.me/api?results=100&nat=us,dk,fr,gb,br"
+        );
+        const data = await res.json();
+  
+        data.results.forEach((item:any) => {
+          const formattedYear = item.registered.date.slice(0, 4);
+          if (formattedYear >= 2000 && formattedYear <= 2010) {
+            dataArray.push(item);
+          }
+        });
+        setMyData(dataArray);
+  
+      } catch (err) {
+        console.log(err);
+      }
+    };
     getData();
   }, []);
 
   React.useEffect(() => {
     setIsLoading(false);
   }, [setIsLoading]);
-
-  const dataArray: any[] = [];
-
-  const getData = async () => {
-    try {
-      const res = await fetch(
-        "https://randomuser.me/api?results=100&nat=us,dk,fr,gb,br"
-      );
-      const data = await res.json();
-
-      data.results.forEach((item:any) => {
-        const formattedYear = item.registered.date.slice(0, 4);
-        if (formattedYear >= 2000 && formattedYear <= 2010) {
-          dataArray.push(item);
-        }
-      });
-      setMyData(dataArray);
-
-    } catch (err) {
-      console.log(err);
-    }
-  };
 
   // console.log(myData);
 
