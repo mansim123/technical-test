@@ -30,6 +30,7 @@
 ### Built With
 
 * [Create react app](https://create-react-app.dev/)
-* [MUI Material](https://mui.com/)
+* [Typescript](https://www.typescriptlang.org/)
+* [Tailwind CSS](https://tailwindcss.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>

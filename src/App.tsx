@@ -74,7 +74,7 @@ function App() {
     <main>
         <header className="filterCont bg-green-100 xs:items-center sm:flex flex-row flex-wrap xs:p-10 p-5 items-center">
               <div className="flex-auto mr-2 xs:w-full sm:w-1/3"><p className="xs:text-center text-right text-base font-roboto">Filter users by name:</p></div>
-              <div className="flex-auto xs:ml-0 ml-2 xs:w-full sm:w-1/3">
+              <div className="flex-auto xs:ml-0 xs:w-full sm:w-1/3">
                 <input
                   className="p-3 border border-black rounded xs:block xs:m-auto xs:w-full xs:mt-4"
                   type="text"
